@@ -1,0 +1,18 @@
+network:
+    ethernets:
+        eth0:　　　　　　　　　　　　　　←有線（モノによって違う）
+            dhcp4: true
+            optional: true
+    wifis:
+        wlan0:　　　　　　　　　　　　　 ←無線（モノによって違う）
+            addresses: [192.168.0.20/24]　   ←アドレス固定したい値
+            dhcp4: true
+            optional: true
+            gateway4: 192.168.0.1　　　　   ←多分Wi-Fiによって違う
+            access-points:
+                "treehouse":　　　　　　　　←SSID
+                    password: "019665CAFE"  ←パスワード
+                "TP-Linl_C48C_5G":　　　　 ←SSID2個目(Wi-Fi1つで良いなら要らない)
+                    password: "humanoidrobot"←パスワード
+    version: 2
+    renderer: NetworkManager
